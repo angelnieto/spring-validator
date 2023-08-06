@@ -9,15 +9,15 @@ import es.ricardo.springvalidator.validator.NameValidator;
 import es.ricardo.springvalidator.validator.TaxResidenceValidator;
 
 public class Customer{
-    private String taxResidence;
+    private Integer taxResidence;
     private String name;
     private Date deceasedDate;
 
-    public String getTaxResidence() {
+    public Integer getTaxResidence() {
         return taxResidence;
     }
 
-    public void setTaxResidence(String taxResidence) {
+    public void setTaxResidence(Integer taxResidence) {
         this.taxResidence = taxResidence;
     }
 

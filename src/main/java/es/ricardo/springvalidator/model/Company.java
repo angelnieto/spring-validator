@@ -5,13 +5,13 @@ import org.springframework.validation.DataBinder;
 import es.ricardo.springvalidator.validator.TaxBusinessValidator;
 
 public class Company extends Customer{
-    private int taxBusiness;
+    private Integer taxBusiness;
 
-    public int getTaxBusiness() {
+    public Integer getTaxBusiness() {
 		return taxBusiness;
 	}
 
-	public void setTaxBusiness(int taxBusiness) {
+	public void setTaxBusiness(Integer taxBusiness) {
 		this.taxBusiness = taxBusiness;
 	}
 
