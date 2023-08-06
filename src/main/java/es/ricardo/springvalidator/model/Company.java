@@ -17,7 +17,7 @@ public class Company extends Customer{
 
 	public int validateTaxBusiness() {
     	DataBinder dataBinder = new DataBinder(this);
-    	dataBinder.addValidators(new TaxBusinessValidator());
+    	dataBinder.addValidators(new TaxBusinessValidator<Company>());
     	return getValidation(dataBinder) == 0 ? 1 : 0;
     }
        

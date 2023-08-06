@@ -39,19 +39,19 @@ public class Customer{
 
     public int validateTaxResidence() {
     	DataBinder dataBinder = new DataBinder(this);
-    	dataBinder.addValidators(new TaxResidenceValidator());
+    	dataBinder.addValidators(new TaxResidenceValidator<Customer>());
     	return getValidation(dataBinder) == 0 ? 1 : 0;
     }
     
     public int validateDeceasedDate() {
     	DataBinder dataBinder = new DataBinder(this);
-    	dataBinder.addValidators(new DeceasedDateValidator());
+    	dataBinder.addValidators(new DeceasedDateValidator<Customer>());
     	return getValidation(dataBinder) == 0 ? 1 : 0;
     }
     
     public int validateName() {
     	DataBinder dataBinder = new DataBinder(this);
-    	dataBinder.addValidators(new NameValidator());
+    	dataBinder.addValidators(new NameValidator<Customer>());
     	return getValidation(dataBinder) == 0 ? 1 : 0;
     }
     

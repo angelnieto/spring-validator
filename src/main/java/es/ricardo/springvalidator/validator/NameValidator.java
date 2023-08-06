@@ -1,6 +1,8 @@
 package es.ricardo.springvalidator.validator;
 
-public class NameValidator extends MandatoryValidator {
+import es.ricardo.springvalidator.model.Customer;
+
+public class NameValidator<T extends Customer> extends MandatoryValidator<T> {
     public NameValidator() {
         super("name", "Name is empty");
     }
