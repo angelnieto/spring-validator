@@ -1,6 +1,8 @@
 package es.ricardo.springvalidator.model;
 
 import java.util.Date;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 import org.springframework.validation.DataBinder;
 
@@ -62,6 +64,15 @@ public class Customer{
 	private int getValidation(DataBinder dataBinder) {
 		dataBinder.validate();
 		return dataBinder.getBindingResult().getFieldErrors().size();
+	}
+	
+	public Map<String, Integer> validateAll(){
+		 Map<String, Integer> map = new LinkedHashMap<>();
+		 map.put("CD_NAME", validateName());
+		 map.put("CD_TAX_RESIDENCE", validateTaxResidence());
+		 map.put("CD_DECEASED_DATE", validateDeceasedDate());
+		 
+		 return map;
 	}
 
 }

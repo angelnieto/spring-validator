@@ -19,7 +19,7 @@ public class Application {
         cal.add(Calendar.HOUR_OF_DAY, 1);
         customer.setDeceasedDate(cal.getTime());
         customer.setName("Hoban Washburne");
-        customer.setTaxResidence(21);
+        customer.setTaxResidence(36);
                
         Company company = new Company();
         cal = Calendar.getInstance();
